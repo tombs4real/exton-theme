@@ -1,0 +1,108 @@
+// BUTTONS
+
+// OVERRIDE FOCUS OUTLINE
+button:focus, input:focus, textarea:focus, select:focus
+  outline: none
+
+// BUTTONS
+a, .btn, button
+  +transition(all, .3s)
+
+a.link
+  position: relative
+  text-decoration: none
+  color: $gray
+  &.orange
+    color: $orange
+  &.red
+    color: $red
+  &.green
+    color: $green
+  &.blue
+    color: $blue
+  &.purple
+    color: $purple
+
+.btn, a.btn, button.btn, input.btn
+  position: relative
+  display: inline-block
+  margin: 0px
+  font-family: $ff-head
+  font-weight: 600
+  text-transform: uppercase
+  padding: 8px 30px
+  text-decoration: none
+  border: 0px
+  border-radius: 30px
+  color: $white
+  background-color: $gray
+  overflow: hidden
+  +shadow(0px, 10px, 20px, 0px, rgba(74, 81, 85, 0.1))
+  z-index: 1
+
+  span
+    position: relative
+    z-index: 3
+
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0, 0.15)
+    opacity: 0
+    content: ''
+    z-index: 2
+    +transition(all, .3s)
+  &:hover
+    transform: translatey(-2px)
+    +shadow(0px, 10px, 30px, 0px, rgba(74, 81, 85, 0.1))
+
+    &::after
+      opacity: 1
+
+  // BUTTON COLORS
+  &.orange
+    background-color: $orange
+  &.red
+    background-color: $red
+  &.green
+    background-color: $green
+  &.blue
+    background-color: $blue
+  &.purple
+    background-color: $purple
+  &.white
+    background-color: $white
+    color: $gray
+
+  // OUTLINE BUTTONS
+  &.outline
+    background: none
+    border-color: $gray
+    border: 2px solid
+    color: $gray
+    &.orange
+      border-color: $orange
+      color: $orange
+    &.red
+      border-color: $red
+      color: $red
+    &.green
+      border-color: $green
+      color: $green
+    &.blue
+      border-color: $blue
+      color: $blue
+    &.purple
+      border-color: $purple
+      color: $purple
+    &.white
+      border-color: $white
+      color: $white
+
+  // SIZES
+  &.small
+    font-size: 0.85rem
+    padding: 4px 18px

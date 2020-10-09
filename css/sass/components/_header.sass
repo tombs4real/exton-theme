@@ -1,0 +1,150 @@
+// HEADER
+.mapts-header
+  position: fixed
+  width: 100%
+  +shadow(0px, 10px, 20px, 0px, rgba(74, 81, 85, 0.1))
+  z-index: 999
+
+  // TOP HEADER
+  .top-header
+
+  // BOTTOM HEADER
+  .bottom-header
+    position: relative
+    background-color: $white
+    padding: 20px
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+
+    // SITE LOGO
+    .site-logo
+      flex: 0 1 280px
+      img
+        width: 100%
+        max-width: 280px
+        height: auto
+
+      +tablet
+        flex: 0 1 200px
+
+      +customMax(1000px)
+        flex: 1 1 auto
+
+    // SITE NAV
+    .site-nav
+      flex: 1 1 auto
+      text-align: right
+      ul
+        li
+          display: inline-block
+          a
+            color: $gray
+            font-family: $ff-head
+            font-weight: 600
+            text-transform: uppercase
+            padding: 8px 20px
+            text-decoration: none
+            border-radius: 30px
+            &:hover
+              background-color: $gray
+              color: $white
+              &.orange
+                background-color: $orange
+              &.red
+                background-color: $red
+              &.green
+                background-color: $green
+              &.blue
+                background-color: $blue
+              &.purple
+                background-color: $purple
+
+            +tablet
+              padding: 6px 15px
+
+      // IF MOBILE NAV IS ACTIVE
+      &.mobile-nav-active
+        display: block
+        position: fixed
+        top: 106px
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        height: 100%
+        z-index: 998
+        background-color: rgba(255, 255, 255, 0.95)
+        text-align: left
+        @include animation('fadeIn .5s ease-out 1')
+
+        ul
+          li
+            display: block
+            a
+              display: block
+              padding: 30px
+              border-radius: 0px
+
+      +tablet
+        font-size: 0.85rem
+
+      +customMax(1000px)
+        display: none
+
+// MOBILE NAV TOGGLE
+.mobile-nav-toggle
+  flex: 0 0 80px
+  display: none
+  position: relative
+  height: 50px
+  width: 60px
+  border-radius: 0px
+  border: 0px
+  background: none
+  margin: 5px 10px
+  +transition(all, .3s)
+
+  &:hover
+    cursor: pointer
+
+    &::before, &::after
+      background-color: $orange
+
+  &::before, &::after
+    position: absolute
+    left: 0
+    right: 0
+    max-width: 70%
+    margin: 0px auto
+    height: 3px
+    background-color: $gray
+    content: ''
+    +transition(all, .3s)
+
+  &::before
+    top: calc(50% - 8px)
+
+  &::after
+    top: calc(50% + 4px)
+
+  // IF MOBILE NAV IS ACTIVE
+  &.mobile-nav-active
+    &::before
+      top: 50%
+      transform: rotate(-45deg)
+    &::after
+      top: 50%
+      transform: rotate(45deg)
+
+  +customMax(1000px)
+    display: block
+
+// FADE IN MOBILE NAV
+@include keyframes(fadeIn)
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1

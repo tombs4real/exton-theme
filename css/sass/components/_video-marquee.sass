@@ -1,0 +1,69 @@
+// VIDEO MARQUEE
+
+.mapts-video-marquee
+  position: relative
+  width: 100%
+  height: auto
+  margin: 0px
+  z-index: 3
+  overflow: hidden
+  text-align: center
+
+  // VIDEO OVERLAY
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    content: ''
+    background: rgba(0, 0, 0, 0.6)
+    z-index: 2
+
+  // MARQUEE CONTENT
+  .mapts-video-marquee-content
+    position: relative
+    width: 100%
+    z-index: 4
+    color: #fff
+    max-width: 1000px
+    padding: 250px 30px
+    margin: 0px auto
+
+    h1
+      font-size: 7rem
+      line-height: 1
+      text-transform: uppercase
+      margin-bottom: 20px
+
+      +mobile
+        font-size: 5rem
+
+      span
+        display: block
+        font-size: 1.8rem
+        letter-spacing: 2px
+
+  // VIDEO IFRAME/ELEMENT
+  .mapts-video-marquee-element
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    padding: 0
+    overflow: hidden
+    pointer-events: none
+    z-index: 1
+
+    & embed, iframe, object, video
+      position: absolute
+      width: 100vw
+      height: 56.25vw
+      min-height: 100vh
+      min-width: 177.77vh
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)

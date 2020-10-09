@@ -1,0 +1,78 @@
+// MIXINS
+
+// Base Transition – use: +transition(all, .3s)
+@mixin transition($type, $dur)
+  -webkit-transition: $type, $dur ease-in-out
+  -moz-transition: $type $dur ease-in-out
+  -ms-transition: $type $dur ease-in-out
+  -o-transition: $type $dur ease-in-out
+  transition: $type $dur ease-in-out
+
+
+// Box Shadows – use: +shadow(0px, 10px, 20px, 0px, rgba(0, 0, 0, 0.1))
+@mixin shadow($horz-length, $vert-length, $blur, $spread, $color)
+  -webkit-box-shadow: $horz-length $vert-length $blur $spread $color
+  -moz-box-shadow: $horz-length $vert-length $blur $spread $color
+  box-shadow: $horz-length $vert-length $blur $spread $color
+
+
+// Animations
+@mixin keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @-ms-keyframes #{$animation-name}
+    @content
+  @-o-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+@mixin animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+
+// --- Media Query Beakpoints ---
+// Mobile – use: +mobile
+@mixin mobile
+  @media (max-width: #{$mobile})
+    @content
+
+// Tablet – use: +tablet
+@mixin tablet
+  @media (max-width: #{$tablet})
+    @content
+
+// Desktop – use: +desktop
+@mixin desktop
+  @media (max-width: #{$desktop})
+    @content
+
+// 2x – use: +twox
+@mixin twox
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @content
+
+// Custom Minimum Width – use: +customMin(600px)
+@mixin customMin($width)
+  @media (min-width: #{$width})
+    @content
+
+// Custom Maximum Width – use: +customMax(800px)
+@mixin customMax($width)
+  @media (max-width: #{$width})
+    @content
+
+// Custom Media Query Height - use: +customMaxHeight(400px)
+@mixin customMaxHeight($height)
+  @media (max-height: #{$height})
+    @content
+
+// Flex with Gutter - use: +flex(0, 1, 50%)
+@mixin flex($grow, $shrink, $basis)
+  flex: $grow $shrink calc(#{$basis} - #{$gutter})

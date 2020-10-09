@@ -1,0 +1,73 @@
+// PHOTO GRID
+
+.photo-grid
+  position: relative
+  width: 100%
+  height: 600px
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: 1fr 1fr
+  column-gap: 30px
+  row-gap: 30px
+  box-sizing: border-box
+  justify-items: stretch
+  align-items: stretch
+
+  .grid-item
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 16px
+
+  .grid-item-01
+    grid-column: 1 / 3
+    grid-row: 1 / 3
+    border-radius: 0px 16px 16px 0px
+
+  .grid-item-02
+    grid-column: 3 / 5
+    grid-row: 1 / 1
+
+  .grid-item-03
+    grid-column: 5 / 6
+    grid-row: 1 / 1
+    border-radius: 16px 0px 0px 16px
+
+  .grid-item-04
+    grid-column: 3 / 4
+    grid-row: 2 / 2
+
+  .grid-item-05
+    grid-column: 4 / 6
+    grid-row: 2 / 2
+    border-radius: 16px 0px 0px 16px
+
+  +customMax(1000px)
+    grid-template-columns: 1fr  50px 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    column-gap: 30px
+    row-gap: 30px
+    height: 800px
+
+    .grid-item-01
+      grid-column: 1 / 4
+      grid-row: 1 / 1
+      border-radius: 0px
+
+    .grid-item-02
+      grid-column: 1 / 3
+      grid-row: 2 / 2
+      border-radius: 0px 16px 16px 0px
+
+    .grid-item-03
+      grid-column: 3 / 4
+      grid-row: 2 / 2
+
+    .grid-item-04
+      grid-column: 1 / 2
+      grid-row: 3 / 3
+      border-radius: 0px 16px 16px 0px
+
+    .grid-item-05
+      grid-column: 2 / 4
+      grid-row: 3 / 3
