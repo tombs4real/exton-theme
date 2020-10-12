@@ -20,17 +20,32 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 2rem
 
+  +mobile
+    font-size: 1.5rem
+
 h2
   font-size: 1.875rem
+
+  +mobile
+    font-size: 1.375rem
 
 h3
   font-size: 1.5rem
 
+  +mobile
+    font-size: 1.3rem
+
 h4
   font-size: 1.25rem
 
+  +mobile
+    font-size: 1.2rem
+
 h5
   font-size: 1.125rem
+
+  +mobile
+    font-size: 1.1rem
 
 h6
   font-size: 1rem
@@ -88,6 +103,11 @@ hr
 .text-right
   text-align: right
 
+// PAGE
+.mapts-page
+  position: relative
+  top: 110px
+
 // MAIN CONTENT
 .mapts-content
   min-height: 800px
@@ -102,6 +122,74 @@ hr
 // SECTION
 .section
   padding: 60px 30px
+
+  +mobile
+    padding: 30px
+
+// COLUMNS
+.col2, .col3, .col4
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: stretch
+
+.col2
+  .col
+    +flex(0, 1, 50%)
+
+    +mobile
+      +flex(0, 1, 100%)
+.col3
+  .col
+    +flex(0, 1, 33.333%)
+
+    +tablet
+      +flex(0, 1, 50%)
+
+    +mobile
+      +flex(0, 1, 100%)
+.col4
+  .col
+    flex: 0 1 25%
+
+    +flex(0, 1, 25%)
+
+    +tablet
+      +flex(0, 1, 50%)
+
+    +mobile
+      +flex(0, 1, 100%)
+
+// PAGE TITLE
+.page-title
+  position: relative
+  width: 100%
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  text-align: center
+  padding: 100px 30px
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+  z-index: 1
+
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .5)
+    content: ''
+    z-index: 2
+    +transition(all, .3s)
+
+  h1
+    color: $white
+    z-index: 3
 
 
 // COLORED BARS
@@ -136,3 +224,73 @@ hr
   width: 1px
   height: 1px
   overflow: hidden
+
+// VIDEO ELEMENTS/EMBED
+.video-element, .embed-element
+  position: relative
+  display: block
+  width: 100%
+  padding: 0
+  overflow: hidden
+
+  &::before
+    display: block
+    content: ''
+    padding-top: 56.25%
+
+  & embed, iframe, object, video
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 0
+
+  +mobile
+    &.mob-600
+      height: 600px
+
+// LISTS
+.mapts-list
+  list-style-type: none
+
+  li
+    position: relative
+    padding-left: 20px
+    margin: 15px 0px
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: '\f054'
+      font-family: 'Font Awesome 5 Pro'
+
+  // COLORS
+  &.orange
+    li
+      &::before
+        color: $orange
+  &.red
+    li
+      &::before
+        color: $red
+  &.green
+    li
+      &::before
+        color: $green
+  &.blue
+    li
+      &::before
+        color: $blue
+  &.purple
+    li
+      &::before
+        color: $purple
+
+
+// CONVERT TO OWLCAROUSEL ON MOBILE
+.owl-carousel
+  .col
+    margin: 15px

@@ -7,6 +7,8 @@ button:focus, input:focus, textarea:focus, select:focus
 // BUTTONS
 a, .btn, button
   +transition(all, .3s)
+  &:hover
+    cursor: pointer
 
 a.link
   position: relative
@@ -22,6 +24,14 @@ a.link
     color: $blue
   &.purple
     color: $purple
+
+  &::after
+    position: absolute
+    top: 0
+    right: -10px
+    content: '\f054'
+    font-family: 'Font Awesome 5 Pro'
+    font-size: 0.65rem
 
 .btn, a.btn, button.btn, input.btn
   position: relative

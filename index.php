@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-    <title>Super Awesome Title</title>
-    <meta name="description" content="Super Awesome Description">
-    <meta name="keywords" content="super, awesome, keywords">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@Market_Apts">
-    <meta name="twitter:title" content="The Exton at University Place | Luxury Apartments in SLC">
-    <meta name="twitter:description" content="The Exton at University Place brings the best of Salt Lake City to you. Dining, entertainment, and more that is so close to home.">
-    <meta name="twitter:image" content="https://www.armde.com/images/slide.jpg">
-    <meta name="twitter:site" content="@Market_Apts">
-    <meta property="fb:app_id" content="1523389874582468" />
-    <meta property="og:site_name" content="The Exton at University Place" />
-    <meta property="og:url" content="https://www.armde.com/videoav2.php" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="The Exton at University Place | Luxury Apartments in SLC" />
-    <meta property="og:image" content="https://www.armde.com/images/slide.jpg" />
-    <meta property="og:updated_time" content="09/17/2020 11:03:26 am" />
-    <meta property="og:description" content="The Exton at University Place brings the best of Salt Lake City to you. Dining, entertainment, and more that is so close to home." />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- END CSS -->
-  </head>
-  <body>
-
-    <!-- PAGE -->
-    <div id="mapts_page" class="mapts-page">
-
-      <!-- HEADER -->
-      <?php include('components/header.php'); ?>
-      <!-- END HEADER -->
+<?php include('inc/header.php'); ?>
 
       <!-- CONTENT -->
       <div id="mapts_content" class="mapts-content">
@@ -58,9 +21,9 @@
         <!-- END SECTION 1 -->
 
         <!-- SECTION 2 -->
-        <div class="cards col4">
+        <div class="cards col4 owl-mob">
           <!-- CARD -->
-          <div class="card" style="background-image:url('img/needs-img.png');">
+          <div class="card col" style="background-image:url('img/needs-img.png');">
             <a href="#">
               <h3>Authentic<br>Layouts</h3>
               <button type="button" class="btn small orange"><span>Floor Plans</span></button>
@@ -68,7 +31,7 @@
           </div>
           <!-- END CARD -->
           <!-- CARD -->
-          <div class="card" style="background-image:url('img/needs-img.png');">
+          <div class="card col" style="background-image:url('img/needs-img.png');">
             <a href="#">
               <h3>Luxury<br>Design</h3>
               <button type="button" class="btn small red"><span>Gallery</span></button>
@@ -76,7 +39,7 @@
           </div>
           <!-- END CARD -->
           <!-- CARD -->
-          <div class="card" style="background-image:url('img/needs-img.png');">
+          <div class="card col" style="background-image:url('img/needs-img.png');">
             <a href="#">
               <h3>Easy<br>Living</h3>
               <button type="button" class="btn small green"><span>Amenities</span></button>
@@ -84,7 +47,7 @@
           </div>
           <!-- END CARD -->
           <!-- CARD -->
-          <div class="card" style="background-image:url('img/needs-img.png');">
+          <div class="card col" style="background-image:url('img/needs-img.png');">
             <a href="#">
               <h3>Local<br>Charm</h3>
               <button type="button" class="btn small blue"><span>Neighborhood</span></button>
@@ -129,18 +92,5 @@
       </div>
       <!-- END CONTENT -->
 
-      <!-- FOOTER -->
-      <?php include('components/footer.php'); ?>
-      <!-- END FOOTER -->
 
-    </div>
-    <!-- END PAGE -->
-
-    <!-- SCRIPTS -->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="https://player.vimeo.com/api/player.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2881e0f4b2.js" crossorigin="anonymous"></script>
-    <script src="js/app.min.js"></script>
-    <!-- END SCRIPTS -->
-  </body>
-</html>
+<?php include('inc/footer.php'); ?>

@@ -25,6 +25,10 @@
         background-color: $orange
         color: $white
 
+      +mobile
+        padding: 6px 10px
+        font-size: 0.85rem
+
   .floor-plan-toggle-pane
     display: none
     flex-flow: row wrap
@@ -36,6 +40,10 @@
 
     +customMax(1000px)
       flex-flow: column wrap
+
+    .floor-plan-item
+      +flex(0, 1, 50%)
+      padding: 30px
 
     .floor-plan-img
       flex: 1 1 60%

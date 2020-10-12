@@ -24,11 +24,29 @@ function init() {
   function checkWidth() {
     var $windowsize = $window.width();
 
-    if ($windowsize >= 1000) {
+    if ( $windowsize >= 1000 ) {
       $mobile_toggle.removeClass( 'mobile-nav-active' );
       $site_nav.removeClass( 'mobile-nav-active' );
-    } else {
+    }
 
+    if ( $windowsize < 900 ) {
+      jQuery( '.owl-mob' ).addClass( 'owl-carousel' ).owlCarousel({
+        loop: true,
+        nav: false,
+        dots: false,
+        responsive: {
+          0: {
+              items:1,
+              stagePadding:50
+          },
+          600: {
+              items:2,
+              stagePadding:50
+          }
+        }
+      });
+    } else if ( $windowsize >= 900 ) {
+      jQuery('.owl-mob').removeClass('owl-carousel').trigger('destroy.owl.carousel');
     }
 
   }
