@@ -85,10 +85,6 @@
         </div>
         <!-- END SECTION 5 -->
 
-        <!-- C2A -->
-        <?php include('components/call-to-action.php'); ?>
-        <!-- END C2A -->
-
       </div>
       <!-- END CONTENT -->
 

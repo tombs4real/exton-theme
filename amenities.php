@@ -21,11 +21,12 @@
         <!-- END SECTION -->
 
         <!-- SECTION -->
-        <div class="wrapper section">
-          <h2>Apartment Features</h2>
-          <hr class="block green">
+        <div class="split-section img-right">
           <div class="col2">
-            <div class="col">
+            <div class="col col-img" style="background-image:url('img/needs-img.png');"></div>
+            <div class="col col-content">
+              <h2>Apartment Features</h2>
+              <hr class="block green">
               <ul class="mapts-list green">
                 <li>Upgraded Sound Barrier between Floors</li>
                 <li>Expansive 9 ft to 14 ft Ceilings*</li>
@@ -47,22 +48,17 @@
                 <li>One-, Two-, &amp; Three- Bedroom Residences</li>
               </ul>
             </div>
-            <div class="col">
-              <img src="img/needs-img.png" alt="">
-            </div>
           </div>
         </div>
         <!-- END SECTION -->
 
         <!-- SECTION -->
-        <div class="wrapper section">
-          <h2>Community & Other Features</h2>
-          <hr class="block green">
+        <div class="split-section img-left">
           <div class="col2">
-            <div class="col">
-              <img src="img/needs-img.png" alt="">
-            </div>
-            <div class="col">
+            <div class="col col-img" style="background-image:url('img/needs-img.png');"></div>
+            <div class="col col-content">
+              <h2>Community & Other Features</h2>
+              <hr class="block green">
               <ul class="mapts-list green">
                 <li>Club Fit</li>
                 <li>icafe</li>

@@ -95,7 +95,7 @@
             <!-- END FLOOR PLAN PANE -->
 
             <!-- FLOOR PLAN PANE -->
-            <div class="floor-plan-toggle-pane active" id="1bed">
+            <div class="floor-plan-toggle-pane" id="1bed">
               <!-- FLOOR PLAN ITEM -->
               <div class="floor-plan-item">
                 <!-- IMG -->
@@ -154,7 +154,7 @@
             <!-- END FLOOR PLAN PANE -->
 
             <!-- FLOOR PLAN PANE -->
-            <div class="floor-plan-toggle-pane active" id="2beds">
+            <div class="floor-plan-toggle-pane" id="2beds">
               <!-- FLOOR PLAN ITEM -->
               <div class="floor-plan-item">
                 <!-- IMG -->
@@ -213,7 +213,7 @@
             <!-- END FLOOR PLAN PANE -->
 
             <!-- FLOOR PLAN PANE -->
-            <div class="floor-plan-toggle-pane active" id="3beds">
+            <div class="floor-plan-toggle-pane" id="3beds">
               <!-- FLOOR PLAN ITEM -->
               <div class="floor-plan-item">
                 <!-- IMG -->

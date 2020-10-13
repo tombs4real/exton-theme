@@ -107,6 +107,11 @@ hr
 .mapts-page
   position: relative
   top: 110px
+  +transition(all, .3s)
+
+  // IF SPECIALS BAR ACTIVE
+  &.specials-bar-active
+    top: 325px
 
 // MAIN CONTENT
 .mapts-content
@@ -125,6 +130,31 @@ hr
 
   +mobile
     padding: 30px
+
+// SPLIT SECTIONS
+.split-section
+  width: 100%
+  .col2
+    .col
+      flex: 1 1 50%
+
+      +tablet
+
+        flex: 1 1 100%
+
+  .col-content
+    padding: 60px
+  .col-img
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+  &.img-right
+    .col-content
+      order: 1
+    .col-img
+      order: 2
+
 
 // COLUMNS
 .col2, .col3, .col4
@@ -226,7 +256,7 @@ hr
   overflow: hidden
 
 // VIDEO ELEMENTS/EMBED
-.video-element, .embed-element
+.video-element, .embed-element, .map-element
   position: relative
   display: block
   width: 100%
@@ -250,6 +280,11 @@ hr
   +mobile
     &.mob-600
       height: 600px
+
+
+.map-element
+  min-height: 500px
+
 
 // LISTS
 .mapts-list
@@ -288,6 +323,16 @@ hr
     li
       &::before
         color: $purple
+
+
+ul.office-hours
+  text-align: left
+  li
+    padding-bottom: 5px
+    border-bottom: 1px solid $border_color
+    span
+      float: right
+
 
 
 // CONVERT TO OWLCAROUSEL ON MOBILE

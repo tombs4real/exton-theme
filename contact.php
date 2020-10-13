@@ -20,6 +20,37 @@
         </div>
         <!-- END SECTION -->
 
+        <!-- SECTION -->
+        <div class="wrapper section">
+          <div class="col2">
+            <div class="col">
+              <ul>
+                <h3>The Exton at University Place</h3>
+                <li><i class="far fa-map-marker"></i> 560 E Park Ave<br>Orem, Utah 84097</li>
+                <li><i class="far fa-phone"></i> <a href="#">(385) 314-4074</a></li>
+              </ul>
+              <br>
+              <a href="#" class="btn small blue"><span>Contact</span></a>
+              <br><br>
+              <h3>Leasing Office Hours</h3>
+              <ul class="office-hours">
+                <li>Monday:<span>09:00 am – 06:00 pm</span></li>
+                <li>Tuesday:<span>09:00 am – 06:00 pm</span></li>
+                <li>Wednesday:<span>09:00 am – 06:00 pm</span></li>
+                <li>Thursday:<span>10:00 am – 06:00 pm</span></li>
+                <li>Friday:<span>09:00 am – 06:00 pm</span></li>
+                <li>Saturday:<span>10:00 am – 05:00 pm</span></li>
+                <li>Sunday:<span>Closed</span></li>
+              </ul>
+            </div>
+            <div class="col">
+              <div id="map" class="map-element"></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- END SECTION -->
+
       </div>
       <!-- END CONTENT -->
 

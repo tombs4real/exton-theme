@@ -4,11 +4,15 @@
 button:focus, input:focus, textarea:focus, select:focus
   outline: none
 
-// BUTTONS
+// GLOBAL DEFAULTS
 a, .btn, button
   +transition(all, .3s)
   &:hover
     cursor: pointer
+
+a
+  color: $gray
+
 
 a.link
   position: relative
@@ -33,6 +37,7 @@ a.link
     font-family: 'Font Awesome 5 Pro'
     font-size: 0.65rem
 
+// BUTTONS
 .btn, a.btn, button.btn, input.btn
   position: relative
   display: inline-block

@@ -1,6 +1,11 @@
 <?php
 // FOOTER
 ?>
+
+<!-- C2A -->
+<?php include('components/call-to-action.php'); ?>
+<!-- END C2A -->
+
       <!-- FOOTER -->
       <footer id="mapts_footer" class="mapts-footer">
         <!-- COLORED BARS -->
@@ -125,6 +130,7 @@
     <!-- SCRIPTS -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://player.vimeo.com/api/player.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoI32SJRl98vNN0-ts0pLk3ONEQOOEJzA"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://kit.fontawesome.com/2881e0f4b2.js" crossorigin="anonymous"></script>
     <script src="js/owl.carousel.min.js"></script>

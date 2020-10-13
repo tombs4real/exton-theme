@@ -1,0 +1,64 @@
+// SPECIALS BAR
+
+
+.specials-bar
+  position: fixed
+  top: -215px
+  left: 0
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 215px
+  padding: 30px
+  color: $white
+  +transition(all, .3s)
+  z-index: 9999
+
+  &.active
+    top: 0
+
+  // COLORS
+  &.orange
+    background-color: $orange
+  &.red
+    background-color: $red
+  &.green
+    background-color: $green
+  &.blue
+    background-color: $blue
+  &.purple
+    background-color: $purple
+
+
+  .specials-bar-content
+    text-align: center
+
+    .specials-bar-title
+      font-size: 1.75rem
+      font-family: $ff-head
+      font-weight: 600
+
+      +mobile
+        font-size: 1rem
+
+    .spcials-bar-desc
+      font-size: 1.25rem
+      margin-bottom: 20px
+
+      +mobile
+        font-size: 0.725rem
+    a
+
+  .specials-close
+    position: absolute
+    top: 5px
+    right: 10px
+    font-size: 1.25rem
+    background: none
+    border: 0px
+    opacity: 1
+
+    &:hover
+      opacity: .8

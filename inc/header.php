@@ -34,6 +34,10 @@
   </head>
   <body>
 
+    <!-- SPECIALS BAR -->
+    <?php include('components/specials-bar.php'); ?>
+    <!-- END SPECIALS BAR -->
+
     <!-- PAGE -->
     <div id="mapts_page" class="mapts-page">
 
